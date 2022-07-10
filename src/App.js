@@ -65,6 +65,7 @@ const App = () => {
         setTowerOne(deepCopy(towerOne));
       }
     }
+    setSize(disks);
     setMoveCount(0);
     setTowerTwo(new Tower());
     setTowerThree(new Tower());
@@ -101,7 +102,7 @@ const App = () => {
   };
 
   const solve = () => {
-    towerOne.moveDisks(disks, towerOne, towerTwo, towerThree);
+    towerOne.moveDisks(disks, towerOne, towerThree, towerTwo, 0);
 
     setTowerOne(deepCopy(towerOne));
 

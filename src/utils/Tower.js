@@ -9,7 +9,6 @@ class Tower {
     if (n === 0) {
       return;
     }
-
     this.moveDisks(n - 1, origin, aux, destination);
     origin.moveTopTo(destination);
     this.moveDisks(n - 1, aux, destination, origin);
